@@ -172,7 +172,7 @@ tree.insert(20);
 tree.insert(170);
 tree.insert(15);
 tree.insert(1);
-console.log(tree.remove(170));
+// console.log(tree.remove(170));
 //console.log(traverse(tree.root));
 console.log(tree.lookup(9));
 
