@@ -1,35 +1,21 @@
-// //Edge List
-// const graph = [[0, 2], [2, 3], [2, 1], [1, 3]];
-
-// //Adjacent/Adjacency List
-// const graph = [[2], [2, 3], [0, 1, 3], [1, 2]];
-
-// //Adjacent Matrix
-
-// const graph = [
-// 	[0, 0, 1, 0],
-// 	[0, 0, 1, 1],
-// 	[1, 1, 0, 1],
-// 	[0, 1, 1, 0]
-// ];
-
 class Graph {
 	constructor() {
 		this.numberOfNodes = 0;
-		this.adjacentList = {};
+		this.adjacentList = {
+			
+		};
 	}
 
 	addVertex(node) {
-
 		this.adjacentList[node] = [];
 		this.numberOfNodes++;
-
 	}
 
 	addEdge(node1, node2) {
 		//undirected Graph
 		this.adjacentList[node1].push(node2);
 		this.adjacentList[node2].push(node1);
+
 	}
 
 	showConnections() {
@@ -46,11 +32,10 @@ class Graph {
 			console.log(node + "-->" + connections);
 		}
 	}
-	
 }
 
-
 const myGraph = new Graph();
+
 myGraph.addVertex('0');
 myGraph.addVertex('1');
 myGraph.addVertex('2');
@@ -68,8 +53,6 @@ myGraph.addEdge('0', '2');
 myGraph.addEdge('6', '5');
 
 myGraph.showConnections();
-
-
 
 //Answer:
 /* 
